@@ -7,7 +7,7 @@ class About extends React.Component {
     return (
       <>
       <div className="textAbout">
-        <p>
+        <p className="aboutText">
           With us you can enjoy a perfect product In quality and service Special
           benefits and discounts...
           <br />

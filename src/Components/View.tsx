@@ -22,8 +22,28 @@ class View extends React.Component <{},MyState>{
   render() {
     return (
      <>
-      <input type="text" id="ser" placeholder="Search..." onChange={this.searchFilter}/>
-      <MDBTable>
+      <input type="text" className="serch" placeholder="Type To Search..." onChange={this.searchFilter}/>
+      <div className="bigdiv">
+    {        
+      this.state.subProductsList  != undefined &&
+      this.state.subProductsList.length > 0 &&
+      this.state.subProductsList.map((item) => (       
+        <>    
+        <div className="prdct"> 
+            <b>{item.getProductName}</b>
+            <span> code: {item.getProductCode}</span>
+            <span>Category: {item.getProductCategory}</span>
+            <span>Price: {item.getProductPrice}</span>
+            <span> Units: {item.getProductUnits} $</span>
+            <img src={item.getPicture}></img>
+          </div>   
+        </>   
+      ))
+    }
+      </div>
+      
+      
+      {/* { <MDBTable>
           <MDBTableHead>
             <tr>
               <th>productName</th>
@@ -51,7 +71,7 @@ class View extends React.Component <{},MyState>{
               ))
             }
           </MDBTableBody>
-        </MDBTable>
+        </MDBTable> } */}
     </>
     );
   }
