@@ -3,8 +3,9 @@ import './navbarc.css';
 
 class HomePage extends React.Component{
 render() {
-    return  <img className="logoback" src="logo2.png"></img>
-
+    return  <>
+    <img className="logoback" src="logo2.png"></img>
+</>
 }
    
 }

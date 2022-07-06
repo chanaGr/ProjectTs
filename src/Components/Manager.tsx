@@ -35,10 +35,10 @@ class Manager extends React.Component{
         event.preventDefault();
         debugger
         this.temp.name=((event.target as HTMLFormElement)[0] as HTMLInputElement).value
-        this.temp.code=parseInt(((event.target as HTMLFormElement)[1] as HTMLInputElement).value),
-        this.temp.codeCat=parseInt(((event.target as HTMLFormElement)[2] as HTMLInputElement).value),
-        this.temp.price=parseInt(((event.target as HTMLFormElement)[3] as HTMLInputElement).value),
-        this.temp.units=parseInt(((event.target as HTMLFormElement)[4] as HTMLInputElement).value)
+        this.temp.code=parseInt(((event.target as HTMLFormElement)[1] as HTMLInputElement).value);
+        this.temp.codeCat=parseInt(((event.target as HTMLFormElement)[2] as HTMLInputElement).value);
+        this.temp.price=parseInt(((event.target as HTMLFormElement)[3] as HTMLInputElement).value);
+        this.temp.units=parseInt(((event.target as HTMLFormElement)[4] as HTMLInputElement).value);
         console.log(this.temp);
         productsList.updateProduct(this.temp.name,this.temp.code,this.temp.codeCat,this.temp.price,this.temp.units)
         this.setState( {delete: false,edit:false, add:false})
@@ -47,10 +47,10 @@ class Manager extends React.Component{
     AddProduct =(event:React.FormEvent<HTMLFormElement>) =>{
         event.preventDefault()
         this.tempAdd.name=((event.target as HTMLFormElement)[0] as HTMLInputElement).value
-        this.tempAdd.code=parseInt(((event.target as HTMLFormElement)[1] as HTMLInputElement).value),
-        this.tempAdd.codeCat=parseInt(((event.target as HTMLFormElement)[2] as HTMLInputElement).value),
-        this.tempAdd.price=parseInt(((event.target as HTMLFormElement)[3] as HTMLInputElement).value),
-        this.tempAdd.units=parseInt(((event.target as HTMLFormElement)[4] as HTMLInputElement).value)
+        this.tempAdd.code=parseInt(((event.target as HTMLFormElement)[1] as HTMLInputElement).value);
+        this.tempAdd.codeCat=parseInt(((event.target as HTMLFormElement)[2] as HTMLInputElement).value);
+        this.tempAdd.price=parseInt(((event.target as HTMLFormElement)[3] as HTMLInputElement).value);
+        this.tempAdd.units=parseInt(((event.target as HTMLFormElement)[4] as HTMLInputElement).value);
         productsList.addProduct(this.tempAdd.name,this.tempAdd.code,this.tempAdd.codeCat,this.tempAdd.price,this.tempAdd.units,this.tempAdd.pic)
         this.setState( {delete: false,edit:false, add:false})
     }
