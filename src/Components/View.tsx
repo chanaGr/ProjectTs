@@ -29,7 +29,7 @@ constructor(props:any) {
  
     viewProd=(item : Product)=>{    
       this.setState({yes:true})
-      this.pic=item.getPicture
+      this.pic=item.getPicture;
     }
 
     back=()=>{
