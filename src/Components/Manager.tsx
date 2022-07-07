@@ -1,5 +1,6 @@
 import React from "react";
-import { Product, productsList } from "../data";
+import { productsList } from "../data";
+import './navbarc.css';
 
 type MyState = {
     delete:boolean;
@@ -71,32 +72,32 @@ class Manager extends React.Component{
         {
             this.state.delete &&
             <form onSubmit={this.DeleteProduct}>
-                <input type="text" placeholder="Enter Code Product To Delete" id="del"/>
-                <input type="submit" value="SUBMIT"/>
+                <input type="text" className="inpt" placeholder="Enter Code Product To Delete" id="del"/>
+                <input type="submit" className="btn" value="SUBMIT"/>
             </form>
         }
         {
             this.state.add  && 
             <form onSubmit={this.AddProduct}>
             <p>Add Product</p>
-            <input type="text" placeholder="Enter Name" ></input>   
-            <input type="text" placeholder="Enter code"></input>   
-            <input type="text" placeholder="Enter codeCategory" ></input>   
-            <input type="text" placeholder="Enter Price"></input>   
-            <input type="text" placeholder="Enter Unit"></input>     
-            <input type="submit" value="SUBMIT"/>
+            <input type="text" className="inpt" min="0" placeholder="Enter Name" ></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter code"></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter codeCategory" ></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter Price"></input>   
+            <input type="number"className="inpt" min="0" placeholder="Enter Unit"></input>     
+            <input type="submit" className="btn" value="SUBMIT"/>
             </form>
         }
         {
             this.state.edit  && 
             <form  onSubmit={this.EditProduct}>
             <p>Edit Product</p>
-            <input type="text" placeholder="Enter Name" ></input>   
-            <input type="text" placeholder="Enter code"></input>   
-            <input type="text" placeholder="Enter codeCategory" ></input>   
-            <input type="text" placeholder="Enter Price" ></input>   
-            <input type="text" placeholder="Enter Unit" ></input>  
-            <input type="submit" value="SUBMIT"/>
+            <input type="text"   className="inpt" min="0"  placeholder="Enter Name" ></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter code"></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter codeCategory" ></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter Price" ></input>   
+            <input type="number" className="inpt" min="0" placeholder="Enter Unit" ></input>  
+            <input type="submit" className="btn" value="SUBMIT"/>
             </form>
         }
         </>

@@ -24,6 +24,8 @@ constructor(props:any) {
   super(props);
   //save in the local storage
   localStorage.setItem('myData', JSON.stringify(productsList.getProductsList));
+  console.log(localStorage.getItem('myData'));
+  
 }
  
  
