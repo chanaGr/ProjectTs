@@ -78,8 +78,9 @@ export class ProductsList {
         const pro = this.productsList.filter(x => x.getProductPrice >= numMin && x.getProductPrice <= numMax)
     }
 
-    getProductsByCodeCategory(codeCategory:any) {
-        const pro = this.productsList.filter(x => x.getProductCategory == codeCategory[0])
+    getProductsByCodeCategory(codeCategory:string) {
+        debugger
+        const pro = this.productsList.filter(x => x.getProductCategory ==parseInt(codeCategory))
     }
     OutOfStockProductsfun() {
         const pro = this.productsList.filter(x => x.getProductUnits < 3)

@@ -56,19 +56,17 @@ class Manager extends React.Component{
     }
 
     DeleteProduct=(event:React.FormEvent<HTMLFormElement>)=>{
-        debugger
         event.preventDefault();
         let code =parseInt(((event.target as HTMLFormElement)[0] as HTMLInputElement).value);
-        console.log(code);
         productsList.deleteProduct(code)
         this.setState( {delete: false,edit:false, add:false})
     }
 
     render() {
         return <>
-        <input type="button" value="Delete Product" onClick={()=>{this.setState({delete:!this.state.delete, edit:false,add:false})}}/>
-        <input type="button" value="Add Product" onClick={()=>{this.setState({delete:false, edit:false,add:!this.state.add})}}/>
-        <input type="button" value="Edit Product" onClick={()=>{this.setState({delete:false, edit:!this.state.edit,add:false})}}/>
+        <input type="button" className="btn" value="Delete Product" onClick={()=>{this.setState({delete:!this.state.delete, edit:false,add:false})}}/>
+        <input type="button" className="btn" value="Add Product" onClick={()=>{this.setState({delete:false, edit:false,add:!this.state.add})}}/>
+        <input type="button" className="btn" value="Edit Product" onClick={()=>{this.setState({delete:false, edit:!this.state.edit,add:false})}}/>
         
         {
             this.state.delete &&
